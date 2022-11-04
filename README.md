@@ -7,6 +7,32 @@ rrule.js cheat sheet with the most needed stuff..
 
 
 
+
+
+
+
+
+## parseString
+
+<br><br>
+
+### Parse rrule string, change dtstart and then create new rrule object
+```javascript
+var options = RRule.parseString('FREQ=DAILY;INTERVAL=6')
+options.dtstart = datetime(2000, 2, 1)
+var rule = new RRule(options)
+```
+
+
+<br><br>
+<br><br>
+_________________________________________________________
+_________________________________________________________
+
+<br><br>
+<br><br>
+
+
 ## rrulestr
 
 <br><br>
@@ -108,24 +134,3 @@ const filteredRules = allRules.filter(date => {
 
 
 
-
-<br><br>
-<br><br>
-_________________________________________________________
-_________________________________________________________
-
-<br><br>
-<br><br>
-
-
-
-## parseString
-
-<br><br>
-
-### Parse rrule string, change dtstart and then create new rrule object
-```javascript
-var options = RRule.parseString('FREQ=DAILY;INTERVAL=6')
-options.dtstart = datetime(2000, 2, 1)
-var rule = new RRule(options)
-```
