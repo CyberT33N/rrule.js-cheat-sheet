@@ -119,10 +119,13 @@ _________________________________________________________
 
 
 
+## parseString
 
+<br><br>
 
-Only parse RFC string and return options.
-
+### Parse rrule string, change dtstart and then create new rrule object
+```javascript
 var options = RRule.parseString('FREQ=DAILY;INTERVAL=6')
 options.dtstart = datetime(2000, 2, 1)
 var rule = new RRule(options)
+```
