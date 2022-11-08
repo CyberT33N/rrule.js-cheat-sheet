@@ -12,7 +12,7 @@ rrule.js cheat sheet with the most needed stuff..
 
 
 
-## parseString
+## parseString()
 
 <br><br>
 
@@ -22,6 +22,20 @@ var options = RRule.parseString('FREQ=DAILY;INTERVAL=6')
 options.dtstart = datetime(2000, 2, 1)
 var rule = new RRule(options)
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br><br>
@@ -84,9 +98,6 @@ _________________________________________________________
 
 
 
-
-
-
 ## .all()
 
 <br><br>
@@ -124,6 +135,53 @@ const filteredRules = allRules.filter(date => {
 
 
 
+
+
+
+
+
+
+<br><br>
+<br><br>
+_________________________________________________________
+_________________________________________________________
+
+<br><br>
+<br><br>
+
+
+
+## toString()
+
+<br><br>
+
+### Convert rrule object to rrule string
+```javascript
+// To string
+rruleSet.toString()
+;('["DTSTART:20120201T023000Z","RRULE:FREQ=MONTHLY;COUNT=5","RDATE:20120701T023000Z,20120702T023000Z","EXRULE:FREQ=MONTHLY;COUNT=2","EXDATE:20120601T023000Z"]')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+_________________________________________________________
+_________________________________________________________
+
+<br><br>
+<br><br>
 
 
 
